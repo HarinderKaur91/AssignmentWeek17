@@ -19,7 +19,9 @@ public class MyAccountInformation extends TestBase {
 	WebElement continueBtn;
 
 	public MyAccountPage updateTelephone(String mobile) {
+		telephone.clear();
 		telephone.sendKeys(mobile);
+		System.out.println(telephone.getText());
 		continueBtn.submit();
 		return new MyAccountPage();
 	}

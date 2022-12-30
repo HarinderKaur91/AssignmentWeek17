@@ -41,7 +41,7 @@ public class TestBase {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		// Manage the page load timeout
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 
 		// Manage the script load timeout
 		driver.manage().timeouts().setScriptTimeout(60, TimeUnit.SECONDS);

@@ -1,5 +1,7 @@
 package com.naveenautomation.Pages;
 
+import java.util.Random;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -78,6 +80,13 @@ public class RegisterAccountPage extends TestBase {
 		clickPrivacyPolicy();
 		continueBtn.click();
 		return new AccountCreated();
+	}
+
+	public String generateRandomEmail() {
+		Random random = new Random();
+		int randomInt = random.nextInt(1000);
+		String randomEmail= "harinder" + randomInt + "@gmail.com";
+		return randomEmail;
 	}
 
 }

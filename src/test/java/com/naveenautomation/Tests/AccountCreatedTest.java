@@ -24,7 +24,8 @@ public class AccountCreatedTest extends TestBase {
 	@Test
 	public void validateUserRegistration() {
 		RegisterAccountPage registerAccountPage = homePage.clickRegisterLink();
-		AccountCreated accountCreated = registerAccountPage.signUp("Harinder", "Kaur", "Harinder21@gmail.com",
+		String randomEmail=registerAccountPage.generateRandomEmail();
+		AccountCreated accountCreated = registerAccountPage.signUp("Harinder", "Kaur", randomEmail,
 				"543212345", "Password1", "Password1");
 		softAssert.assertEquals(accountCreated.getSuccessAccountCreatedText(), "Your Account Has Been Created!",
 				"Account not created");
